@@ -1,0 +1,92 @@
+<div>
+  
+  <div id="content" >
+      <!-- Nav tabs -->
+      <br>
+      <br>
+      <nav class="nav nav-pills-color-info nav-tabs" style="color:darkcyan;">
+        
+          <a class="nav-link active" data-toggle="tab" href="#home" style="color:darkcyan;font-weight:bold; font-size: 16px; ">LISTE</a>
+         
+          <a class="nav-link" data-toggle="tab" href="#menu1" style="color:darkcyan;font-size: 16px;font-weight:bold;;" (click)="userclicked(users)">AJOUT</a>
+       
+      </nav>
+      <div *ngIf="message" [ngClass]="message.cssClass">{{message.text}}</div>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+          <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div *ngIf="div2"> <button class=" btn text-white" (click)="div1Function()" style=" background-color:#007E33 ; width:70px" >ADD NEW +</button>   </div>
+            <div class="table-wrapper-scroll-y my-custom-scrollbar"><table id="ok"class="table1 table-bordered table-striped mb-0">
+            
+            <thead>
+              <tr *ngIf="div3" >
+                
+                   <th scope="col" > <input type="text" class="form-control" id="lastName" (change)="Change($event)" [(ngModel)]="user.lastName" name="lastName"  [ngModelOptions]="{standalone: true}"  style="width:90px" placeholder="Nom" required/></th>
+                   <th scope="col" > <input type="text" class="form-control" id="firstName" name="firstName" (change)="Change1($event)"  [(ngModel)]="user.firstName"  [ngModelOptions]="{standalone: true}" style="width:90px" placeholder="Prénom"></th>
+                   <th scope="col" > <input type="text" class="form-control" id="emailId" [(ngModel)]="user.emailId" name="emailId" (change)="Change2($event)"   [ngModelOptions]="{standalone: true}" style="width:130px" placeholder="email"></th>  
+                   
+                  
+                   <th colspan="2" al><button type="button" name="add" class="btn text-white" style="background-color: #007E33 ;  width:80px" (click)="updateuser(user)" >Modifier</button></th>
+                
+               </tr>
+      
+                <tr class="tr1">
+                
+                  <th scope="col"width="130px">Nom</th>
+                  <th scope="col"width="130px">Prénom</th>
+                  <th scope="col"width="200px">E-mail</th>
+                  
+                 
+              <th scope="col" colspan="2">Actions</th>  
+                </tr>
+              </thead>
+              
+              <tr  *ngFor="let d of (users) " style="overflow-x: auto;">
+                
+              
+                 <td>{{ d.lastName }}</td>
+                 <td>{{ d.firstName }}</td>
+                 <td width="180px">{{ d.emailId}} </td>
+                 
+                
+               
+                 <td><button type="button" class="btn  btn-sm text-white" style="background-color :#0099CC" (click)="userclicked(d) ; div3Function(); ">Modifier</button></td>
+                 <td><button type="button" class="btn  btn-sm text-white" style="background-color : #b71c1c;" (click)="deleteuser(d)">Supprimer</button></td>   
+             </tr>
+               
+            </table>
+          </div>
+         
+          </form>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+         
+          <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+            <table id="table5">
+             <tr>
+            <th colspan="2"><h3 style="color: #0099CC;">Ajouter un nouveau utilisateur</h3></th></tr>
+            
+             
+             <tr> <th id="th5"><label for="lastName">Nom</label></th><th id="th5"> <input type="text" class="form-control" id="lastName" (change)="Change($event)" [(ngModel)]="user.lastName" name="lastName"  [ngModelOptions]="{standalone: true}" style="height:10px" style="width:200px" placeholder="Nom" required/></th>
+              </tr>  <tr> <th id="th5"><label for="firstName">Prénom</label></th><th id="th5">    <input type="text" class="form-control" id="firstName" name="firstName" (change)="Change1($event)"  [(ngModel)]="user.firstName"  [ngModelOptions]="{standalone: true}" style="width:200px" placeholder="Prénom"></th>
+               </tr>   <tr> <th id="th5"><label for="emailId">E-mail</label></th><th id="th5">       <input type="text" class="form-control" id="emailId" [(ngModel)]="user.emailId" name="emailId" (change)="Change2($event)"   [ngModelOptions]="{standalone: true}" style="width:200px" placeholder="email"></th>
+                
+                 </tr>       
+                        
+                      <tr> <th colspan="2" style="text-align: center;">   <button type="submit" name="add" class=" btn text-white" style=" background-color:#007E33 ; width:70px" >Ajouter</button> <button type="reset" class="btn text-white" style="background-color :#0099CC ; margin-left: 20px; width: 100px;" >Reinitialiser</button>
+                 
+        
+                   </th>    </tr>
+                
+              </table>   
+            </form>
+        </div>
+        
+      </div>
+     
+  </div>
+  </div> 
+
+
+  

@@ -1,0 +1,121 @@
+.table1{
+//margin-top:20px;
+width : 700px;
+text-align: center;
+//margin-left: 300px;
+}
+#div1,#div2{
+   margin-top:20px; 
+   margin-left: 300px;
+}
+#imagee{
+}
+#th5{
+   width: 300px;
+   text-align: center;
+   vertical-align: bottom;
+}
+#image{
+   width: 50px;
+   height: 30px;
+   
+   border: 2px solid #1c2b36;
+}
+#table5{
+   width : 500px;
+   border: 1px solid black;
+   vertical-align: center;
+   height: 500px;
+}
+.form-control{
+   width: 90px;
+   height: 30px;
+   padding: 12px 20px;
+   border: 2px solid #1c2b36;
+   text-align: center;
+  
+}
+.my-custom-scrollbar {
+   position: relative;
+   height: 360px;
+   width: 800px;
+   overflow: auto;
+   }
+   .table-wrapper-scroll-y {
+   display: block;
+   }
+thead{
+   background-color: #e0e0e0 ;
+   height: 50px;
+   width: 700px;
+
+}
+
+.tr2{
+   text-align: center;
+}
+.tr1{
+   font-family: Arial;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 13px;
+   color: #fff;
+}
+.tr1{
+   //background-color: #1c2a48;
+   background-color: teal;
+  
+}
+#divv {
+   background-color:  #1c2b36 ;  
+   height: 56px;
+  // position: fixed; /* Make it stick, even on scroll */
+   
+}
+#tablee{
+   height: 100%;
+   width: 100%;
+   border-color: #00695df8;
+   
+}
+#bar{
+   
+   background-color: #263238;
+}
+#uti{
+   overflow:hidden;
+   -webkit-border-radius:70px;
+   -moz-border-radius:70px;
+   border-radius:70px;
+   width:120px;
+   height:120px;
+}
+#navi{
+   background-color: #263238;
+   width: 268px;
+   vertical-align: top;
+   text-align: center;
+   padding-top: 50px;
+   height: 1000px;
+   
+}
+#content{
+  padding: 0;
+   margin-left: 400px;
+ 
+}
+#right{
+   text-align: left;
+   font-size: 16px;
+}
+#left{
+   text-align: right;
+   font-size: 16px;
+}
+#admin
+{
+   font-size: 16px;
+   font-weight:bold;
+   color: white;
+
+}
